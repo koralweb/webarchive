@@ -8,7 +8,7 @@ const Tr = ({site, idx, updateList}) => {
     }
 
     const remove = () => {
-        fetch('http://localhost:8888/api/deleteSite', {
+        fetch('http://localhost:8484/api/deleteSite', {
             method: 'POST',
             body: JSON.stringify({site}),
             headers: {

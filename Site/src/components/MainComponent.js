@@ -8,7 +8,7 @@ function MainComponent() {
     const [bigInput, setBigInput] = useState('')
 
     const updateList = () => {
-        fetch('http://localhost:8888/api/fullSiteList', {
+        fetch('http://localhost:8484/api/fullSiteList', {
             method: 'POST',
             body: JSON.stringify({bigInput}),
             headers: {

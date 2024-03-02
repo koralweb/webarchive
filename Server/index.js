@@ -3,7 +3,7 @@ const siteRouter = require('./routes/routes')
 const cors = require("cors");
 var bodyParser = require("body-parser");
 
-const PORT = process.env.PORT || 8888
+const PORT = process.env.PORT || 8484
 
 
 const app = express()
