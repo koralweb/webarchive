@@ -1,0 +1,6 @@
+Server/node_modules
+Site/node_modules
+Server/.idea
+Site/.idea
+Server/package-lock.json
+Site/package-lock.json
