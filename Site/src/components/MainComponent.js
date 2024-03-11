@@ -53,10 +53,9 @@ function MainComponent() {
                 <tr>
                     <th>#</th>
                     <th>Site</th>
-                    <th>Открыть</th>
+                    <th>Открыть Карту</th>
+                    <th>Открыть Webarchive</th>
                     <th>Удалить</th>
-                    <th>Add DNS</th>
-                    <th>DNS Servers</th>
                 </tr>
                 </thead>
                 <tbody>

@@ -4,7 +4,11 @@ import React from "react";
 const Tr = ({site, idx, updateList}) => {
 
     const clickOpen = () => {
-        window.open(` https://web.archive.org/web/20241001000000*/${site}`, '_blank');
+        window.open(`https://web.archive.org/web/20241001000000*/${site}`, '_blank');
+    }
+
+    const clickOpenMap = () => {
+        window.open(`https://yandex.com/maps/?ll=10.854186%2C49.182076&mode=search&sll=10.854186%2C49.182076&sspn=84.023438%2C32.394546&text=${site}&z=4`, '_blank');
     }
 
     const remove = () => {
@@ -27,17 +31,16 @@ const Tr = ({site, idx, updateList}) => {
     return (
         <tr>
             <td>{idx + 1}</td>
-            <td>{site}</td>
+            <td style={styles.siteName}>{site}</td>
             <td>
-                <div style={styles.openBtn} onClick={clickOpen}>Открыть</div>
+                <div style={styles.openBtn} onClick={clickOpenMap}>Открыть Карту</div>
             </td>
             <td>
                 <div style={styles.openBtn} onClick={remove}>Удалить</div>
             </td>
             <td>
-
+                <div style={styles.openBtn} onClick={clickOpen}>Открыть Webarchive</div>
             </td>
-            <td></td>
         </tr>)
 }
 
@@ -51,6 +54,9 @@ const styles = {
         alignItems: 'center',
         justifyContent: 'center',
         cursor: 'pointer'
+    },
+    siteName: {
+        width: 500
     }
 }
 
