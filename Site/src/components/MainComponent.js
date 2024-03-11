@@ -20,6 +20,10 @@ function MainComponent() {
             .catch(err => console.log(err))
     }
 
+    const changeList = (site) => {
+        setSiteList(siteList.filter(s => s !== site))
+    }
+
     useEffect(() => {
         updateList()
     }, [bigInput])
@@ -31,7 +35,7 @@ function MainComponent() {
                 key={site}
                 site={site}
                 idx={idx}
-                updateList={updateList}
+                updateList={changeList}
             />
         ))
     }
